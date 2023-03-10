@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00FFEB3B"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Examen Final: Facultades en tiempo real"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_width="395dp"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:background="#FA0202"
+        android:backgroundTint="#0BAE05"
+        android:backgroundTintMode="screen"
+        android:onClick="abrirCamera"
+        android:text="Activar Cámara"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconPadding="0dp"
+        app:iconTint="#FFFFFF"
+        app:iconTintMode="src_in"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:rippleColor="#FFFFFF" />
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/btCamera"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="53dp"></FrameLayout>
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Resultados:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/button_capture"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="captureImage"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
